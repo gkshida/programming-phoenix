@@ -5,6 +5,8 @@
 
 ## SUMMARY
 
+### Introduction
+
 * Think of a web server as a function;
   * A URL typed in a browser -> think as a call to a function in a remote server;
   * This function handles the request and returns a response.
@@ -31,3 +33,18 @@
 ```
   * This **_connection_** comes with information about the request;
   * Phoenix handles the **_connection_** with a series of **_pipelines_** and returns with a response.
+    * That's **how every layer of Phoenix works**: functions call other functions and the first argument of every function is the **_connection_**.
+
+#### Inside controllers
+
+* A _controller_ is where an _action_ is placed;
+* An _action_ is a function that handles requests.
+
+---
+
+### Building a Feature
+
+* Routes in Phoenix go in **web/router.ex** by default, i.e. [./hello/web/router.ex](./hello/web/router.ex);
+* All controllers are in **web/controllers**;
+* A template has the extension **_eex_**;
+  * Phoenix compiles it into a function.
