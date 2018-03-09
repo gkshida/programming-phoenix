@@ -51,6 +51,26 @@
 
 ---
 
+### Creating a Throwaway Project
+* A **_task_** is a Elixir script;
+* Repetitive **_tasks_** that manage programming cycles run using **Mix**;
+  * **Mix** is a build tool to do many jobs like creating, compiling, testing, etc.
+* To start a new phoenix project, use the **phoenix.new** task:
+```shell
+  $ mix phoenix.new [name-of-the-project]
+```
+  * The **phoenix.new** task creates a project and all the files neeeded to compile and run it.
+* Inside the project folder, create the database using the **ecto.create** task:
+```shell
+  $ mix ecto.create
+```
+* To run the Phoenix project, use the **phoenix.server** task:
+```shell
+  $ mix phoenix.server
+```
+
+---
+
 ### Building a Feature
 
 * Routes in Phoenix go in **web/router.ex** by default, i.e. [./hello/web/router.ex](./hello/web/router.ex);
