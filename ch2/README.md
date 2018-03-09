@@ -37,8 +37,17 @@
 
 #### Inside controllers
 
-* A _controller_ is where an _action_ is placed;
-* An _action_ is a function that handles requests.
+* An **_action_** is a function that handles requests;
+* A **_controller_** is where an **_action_** is placed;
+  * A **_controller_** is also a **_pipeline_** of functions;
+  ```elixir
+    connection
+    |> controller
+    |> commom_services
+    |> action
+  ```
+  * In Phoenix, try to limit side effects to the **_controller_**;
+  * The **_controller_** is responsible to read and write data.
 
 ---
 
